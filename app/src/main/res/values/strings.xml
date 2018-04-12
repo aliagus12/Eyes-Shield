@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Eyes Shield</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="value">0</string>
+</resources>
