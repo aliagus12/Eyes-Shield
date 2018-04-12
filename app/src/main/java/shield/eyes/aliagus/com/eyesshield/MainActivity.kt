@@ -9,13 +9,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initUI()
-        setBrigness()
+        setBrightness()
     }
 
     private fun initUI() {
 
     }
 
-    private fun setBrigness() {
+    private fun setBrightness() {
     }
 }
