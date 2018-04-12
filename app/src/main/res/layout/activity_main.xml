@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <SeekBar
-            android:id="@+id/seekbar_brightness"
+            android:id="@+id/seekBar_brightness"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
