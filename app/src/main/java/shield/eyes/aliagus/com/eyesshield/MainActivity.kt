@@ -17,9 +17,9 @@ import shield.eyes.aliagus.com.eyesshield.service.ServiceNotification
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var preff: SharedPreferences
-    var isGranted = false
-    val TAG = javaClass.simpleName
+    private lateinit var preff: SharedPreferences
+    private var isGranted = false
+    private val TAG = javaClass.simpleName
 
     companion object {
         const val PERMISSION_CODE_OVERLAYS = 102
@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         checkingPermissionOverlay()
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     private fun checkingPermissionOverlay() {
         var grantedOverlay = Settings.canDrawOverlays(applicationContext)
         if (!grantedOverlay) {

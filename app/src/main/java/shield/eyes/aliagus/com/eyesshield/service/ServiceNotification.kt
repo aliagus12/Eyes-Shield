@@ -10,14 +10,22 @@ import android.os.IBinder
 import android.support.v4.app.NotificationCompat
 import shield.eyes.aliagus.com.eyesshield.MainActivity
 import shield.eyes.aliagus.com.eyesshield.R
+import shield.eyes.aliagus.com.eyesshield.overlay.Filter
+import shield.eyes.aliagus.com.eyesshield.overlay.Overlays
 
 open class ServiceNotification : Service() {
 
     private var notificationCompat: Notification? = null
     private var startCODE = 1
+    private lateinit var mFilter: Filter
 
     override fun onBind(intent: Intent?): IBinder? {
         return null
+    }
+
+    override fun onCreate() {
+        super.onCreate()
+        mFilter = Overlays(this)
     }
 
     @SuppressLint("WrongConstant")
